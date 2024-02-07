@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import "../src/tailwind.css"
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
