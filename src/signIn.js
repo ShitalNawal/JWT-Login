@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../src/tailwind.css"
+import { useNavigate } from "react-router";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -13,6 +13,7 @@ const SignIn = () => {
         password,
       });
       console.log(response.data);
+      navigate("/dashboard")
     } catch (error) {
       console.error(error);
     }
@@ -77,3 +78,56 @@ const SignIn = () => {
 };
 
 export default SignIn;
+// import React, { useState } from "react";
+// import axios from "axios";
+
+// const SignIn = () => {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [token, setToken] = useState(null);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     try {
+//       const response = await axios.post("http://localhost:8880/signIn", {
+//         params: {
+//           email,
+//           password,
+//         },
+//       });
+//       console.log(response.data,"response");
+//       setToken(response.data.accessToken); // Assuming accessToken is the key for the token in the response
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   };
+
+//   return (
+//     <div>
+//       {token ? (
+//         <div>
+//           <p>Token: {token}</p>
+//           {/* You can redirect the user to another page or perform other actions */}
+//         </div>
+//       ) : (
+//         <form onSubmit={handleSubmit}>
+//           <input
+//             type="email"
+//             placeholder="Email"
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//           />
+//           <input
+//             type="password"
+//             placeholder="Password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//           />
+//           <button type="submit">Sign In</button>
+//         </form>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default SignIn;
