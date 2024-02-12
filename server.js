@@ -22,9 +22,8 @@ db.sequelize.sync()
 const userRoute = require("./app/router/userRoutes")
 app.use("/",userRoute)
 
-app.get("/api", (req,res)=>{
-    res.send("My Api")
-})
+const contactRoute = require("./app/router/contactRoute")
+app.use("/", contactRoute)
 
 app.listen(8880, ()=>{
     console.log("Server is running on port 8880")
