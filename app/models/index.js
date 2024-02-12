@@ -17,6 +17,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 
 const db = {}
 db.User = require("./userModel")(sequelize,Sequelize)
+db.Contact = require("./contactModel")(sequelize,Sequelize)
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
