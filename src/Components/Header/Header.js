@@ -1,7 +1,17 @@
-import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
+
+    const closeDropdown = () => {
+        setShowDropdown(false);
+    };
+
     return (
         <header className="shadow sticky z-50 top-0">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
@@ -26,6 +36,33 @@ export default function Header() {
                         >
                             Get started
                         </Link>
+                        
+                        <div className="relative">
+                            <button
+                                onClick={toggleDropdown}
+                                className="flex items-center focus:outline-none"
+                            >
+                                <img src='/p-icon.jpg' className="mr-3 h-12"/>
+                            </button>
+                            {showDropdown && (
+                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-10">
+                                    <NavLink
+                                        to="/messages"
+                                        className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                        onClick={closeDropdown}
+                                    >
+                                        Messages
+                                    </NavLink>
+                                    <NavLink
+                                        to="/dashboard"
+                                        className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                        onClick={closeDropdown}
+                                    >
+                                        Log out
+                                    </NavLink>
+                                </div>
+                            )}
+                        </div>
                     </div>
                     <div
                         className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
@@ -34,7 +71,7 @@ export default function Header() {
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                             <li>
                                 <NavLink
-                                to="/Dashboard"
+                                    to="/Dashboard"
                                     className={({isActive}) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
@@ -44,7 +81,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <NavLink
-                                to="/about"
+                                    to="/about"
                                     className={({isActive}) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
@@ -54,25 +91,14 @@ export default function Header() {
                             </li>
                             <li>
                                 <NavLink
-                                to="/contact"
+                                    to="/contact"
                                     className={({isActive}) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
-                                    Contact
+                                    Contact  
                                 </NavLink>
                             </li>
-                            {/* <li>
-                                <NavLink
-                                to="/github"
-                                    className={({isActive}) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
-                                >
-                                    Github
-                                </NavLink>
-                            </li> */}
-
                         </ul>
                     </div>
                 </div>
