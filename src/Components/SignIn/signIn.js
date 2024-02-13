@@ -14,7 +14,7 @@ const SignIn = () => {
         password,
       });
       console.log(response.data);
-      navigate("/dashboard")
+      navigate("/")
     } catch (error) {
       console.error(error);
     }
