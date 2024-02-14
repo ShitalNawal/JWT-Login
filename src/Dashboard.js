@@ -1,25 +1,20 @@
 import React from 'react'
 import Header from './Components/Header/Header'
-
+import Skills from './Components/Skills/Skills'
 function Dashboard() {
   return (
-    <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300  h-screen " >
+    <main className="relative bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 h-screen">
       <Header/>
-        <div className='   items-center font-bold  '>
-        <div className=' text-teal-800 text-center font-sacramento mt-8 text-6xl '> 
-        <img src='/cloud.svg' className='absolute top-24 right-24'/>
-           <div>
-           I'm Shital
-           </div>
-           <div className='text-2xl mt-4'>
-            a Web Developer
-           </div>
-           <img src='/cloud.svg' className='inset-x-36 ml-44'/>
-            <img src= '/mountain.svg' alt="mountain" className='h-1/2 w-3/4 ml-48' />
+      <div className='flex flex-col items-center justify-center h-full text-center font-bold'>
+        <div className='text-teal-800 font-sacramento text-6xl relative z-10 leading-tight'> 
+          <div className='relative'>I'm <span className="text-rose-600">Shital</span></div>
+          <div className='text-2xl mt-4 relative'>a <span className="text-rose-600">Web Developer</span></div>
         </div>
-        </div>
+        <img src= '/bg-main.jpg' alt="mountain" className='absolute inset-0 object-cover w-full h-full opacity-70 z-0' />
+      </div>
     </main>
   )
 }
+
 
 export default Dashboard

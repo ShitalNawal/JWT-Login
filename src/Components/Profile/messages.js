@@ -13,7 +13,7 @@ function Messages() {
       .catch(error => {
         console.error('Error fetching messages:', error);
       });
-  }, []); // Empty dependency array to run effect only once on component mount
+  }, []); 
 
   return (
     <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 h-screen w-screen">
