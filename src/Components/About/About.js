@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 function About() {
   return (
     <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300  h-full w-full ">
@@ -228,6 +229,7 @@ function About() {
         </div>
         <hr className="mt-8" />
       </div>
+      <Footer/>
     </main>
   );
 }

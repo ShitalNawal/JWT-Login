@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -78,6 +79,7 @@ const SignIn = () => {
         </form>
       </div>
     </div>
+    <Footer/>
     </main>
   );
 };

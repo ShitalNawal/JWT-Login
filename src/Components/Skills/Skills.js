@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
-
+import Footer from "../Footer/Footer";
 function Skills() {
   return (
     <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 h-full relative">
@@ -27,6 +27,7 @@ function Skills() {
           <SkillItem name="MYSQL" percentage={80} />
         </div>
       </div>
+      <Footer/>
     </main>
   );
 }
