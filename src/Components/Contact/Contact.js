@@ -24,11 +24,18 @@ function Contact() {
     }
   };
   return (
-    <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300  h-screen w-screen">
+    <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300  h-screen w-screen relative">
       <Header />
+      <img src="/bg.jpg" className="h-96 w-full absolute opacity-70 " />
+      <div className="ms-96 rounded-3xl animate__animated animate__fadeInUp">
+        <h1 className="pt-48 text-white text-5xl font-bold text-center drop-shadow-2xl transition-colors">
+          <p className="ml-80 bg-cyan-600 text-center pt-5 w-1/2 rounded-t-lg">CONTACT</p>
+        </h1>
+        <h3 className="pt-4 mb-8 text-white text-2xl font-bold text-center drop-shadow-2xl bg-cyan-600 pb-5 w-1/2 ml-80 rounded-b-lg">Let's have a chat.</h3>
+      </div>
       <div className="   items-center   ">
         <div className=" text-teal-800   mt-8">
-          <div className="flex justify-between">
+          <div className="flex justify-between bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 pt-12 pb-12">
             <div className="ml-48">
               <div>
                 <h1 className="text-4xl mt-6 font-bold">Contact Us</h1>
@@ -112,7 +119,7 @@ function Contact() {
                   <div>
                     <button
                       type="submit"
-                      className="group relative w-full flex justify-center mt-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-amber-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-300"
+                      className="group relative w-full flex justify-center mt-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-300"
                     >
                       Send Message
                     </button>

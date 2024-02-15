@@ -12,7 +12,7 @@ function Skills() {
         </h1>
         <h3 className="pt-4 mb-8 text-white text-2xl font-bold text-center drop-shadow-2xl bg-cyan-600 pb-5 w-1/2 ml-80 rounded-b-lg">Skills speak louder than words.</h3>
       </div>
-      <div className="text-teal-800 text-4xl text-center pt-10 font-bold underline">Skills</div>
+      <div className="text-rose-600 text-4xl text-center pt-10 font-bold underline">Skills</div>
       <div className="ms-9 mt-10 pt-4">
         <div className="flex flex-wrap">
           <SkillItem name="Git" percentage={80} />
