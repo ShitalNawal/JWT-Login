@@ -11,6 +11,7 @@ import Messages from "./Components/Profile/messages";
 import { AuthProvider } from "./Components/AuthContext/AuhContext";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 import Skills from "./Components/Skills/Skills";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Router>
         <Routes>
           {/* <Route path="/" element={<Header />} /> */}
+          <Route path="/footer" element={<Footer />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/" element={<Dashboard />} />

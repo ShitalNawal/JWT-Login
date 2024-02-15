@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import { useNavigate } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import axios from "axios";
 function Contact() {
   const [name, setName] = useState("");
@@ -130,6 +131,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Footer/>
     </main>
   );
 }

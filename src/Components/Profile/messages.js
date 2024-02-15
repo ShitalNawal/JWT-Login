@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from "../Header/Header";
-
+import Footer from '../Footer/Footer';
 function Messages() {
   const [messages, setMessages] = useState([]);
 
@@ -16,9 +16,9 @@ function Messages() {
   }, []); 
 
   return (
-    <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 h-screen w-screen">
+    <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 h-full w-screen">
       <Header />
-      <div className="container mx-auto text-teal-800  mt-8">
+      <div className="container mx-auto text-teal-800  mt-8 pb-48">
         <h1 className="text-2xl font-bold mb-4">Notifications: </h1>
         <div className="grid grid-cols-2 gap-4">
           {messages.map(message => (
@@ -34,6 +34,7 @@ function Messages() {
           ))}
         </div>
       </div>
+      <Footer/>
     </main>
   );
 }

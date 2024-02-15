@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './Components/Header/Header';
-import Skills from './Components/Skills/Skills';
+
 import { Link } from 'react-router-dom';
+import Footer from './Components/Footer/Footer';
 
 const SkillItem = ({ name, percentage }) => {
   return (
@@ -15,7 +16,9 @@ const SkillItem = ({ name, percentage }) => {
       </div>
       <p className="mt-1 text-sm text-gray-600">{percentage}%</p>
     </div>
+    
   );
+  
 };
 
 function Dashboard() {
@@ -56,6 +59,7 @@ function Dashboard() {
           </div>
         </div>
         </div>
+        <Footer/>
     </main>
     
   );
