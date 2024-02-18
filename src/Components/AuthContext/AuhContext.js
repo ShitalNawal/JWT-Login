@@ -11,10 +11,10 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (credentials) => {
     try {
-      // Call the signIn API with user credentials
+      
       const response = await axios.post('http://localhost:8880/signIn', credentials);
       
-      // Extract access token and refresh token from the response
+      
       const { accessToken, refreshToken } = response.data;
 
       // Set access token and refresh token in state
