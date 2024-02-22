@@ -6,7 +6,7 @@ function About() {
     <main className="bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300  h-full w-full ">
       <Header />
       <div className=" text-teal-800  font-bold px-8 ">
-        <img src="/profile-img.jpg" className="h-32 w-32 rounded-full  mt-4 " />
+        <img src="/img.jpeg" className="h-32 w-32 rounded-full  mt-4 " />
         <div className=" text-teal-800 font-bold  text-2xl mt-8">
           Shital Nawal
         </div>
